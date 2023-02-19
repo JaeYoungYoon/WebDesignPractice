@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A4 Wireframe</title>
+  <style>
+    *{
+      margin:0 auto;; padding:0; list-style:none;
+    }
+    a{
+      text-decoration: none;
+      color:#333;
+      display:block;
+    }
+
+    .clearfix::after, .clearfix::before{
+      clear:both;
+      display:block;
+      content:"";
+    }
+
+    .wrap{
+      width:1200px;
+      height:700px;
+      margin:0 auto;
+      /*background-color:rgba(0,0,0,0.5);*/
+    }
+
+    #header{
+      width:100%; height:100px;
+      /*background-color: orange;*/
+    }
+
+    #header h1{float:left; text-align:center; width:250px;
+    height:100px; line-height:100px; background-color: antiquewhite;}
+    
+    #header .nav{
+      float:right;
+      position:relative;
+      width:950px;height:100px;
+      background:cadetblue;
+    }
+
+    #header .nav > ul {
+      text-align:center;
+      position:absolute;
+      top:60px; left:7%;
+    }
+
+    #header .nav > ul >li {
+      float:left;
+      width:200px;
+      height:40px;
+      line-height:40px;
+      
+      box-sizing: border-box;
+      font-size:18px;
+    }
+
+    #header .nav ul >li>a:hover{
+      background:#AAA;
+      font-weight:bold;
+    }
+
+    
+    #header .nav .submenubg{
+      position:absolute;
+      width:1200px; height:180px;
+      background:#EEE;
+      top:100px;
+      left:-250px;
+      /*display:none;*/
+      /*z-index:99;*/
+    }
+
+
+    #header .nav > ul > li > ul {
+      /*display:none;*/
+      background:#EEE;
+    }
+
+
+    #header .nav > ul > li > ul > li {
+      width:200px;
+      height:40px;
+      line-height:40px;
+      /*z-index:100;*/
+    }
+
+    #header .nav > ul > li > ul > li >a:hover{
+      background:#aaa;
+      font-weight:bold;
+    }
+
+
+   
+    #imgSlide{
+      width:100%; height:300px;
+      background:pink;
+    }
+
+    #contents{
+      width:100%; 
+      height:200px;
+      /*background:yellowgreen;*/
+    }
+#contents div{
+  float:left;
+  width:33.3333%;
+  height:100%;
+}
+
+
+
+#contents h3 {
+  display:inline-block;
+  background:yellow;
+  padding:10px 30px;
+}
+
+
+#contents .notice{background:yellowgreen;}
+
+#contents .notice ul li {
+  margin-left:50px;
+  list-style:circle;
+  padding-bottom:15px;
+}
+
+#contents .notice ul li a:hover{
+  text-decoration:underline;
+}
+
+#contents .gallery{background:sandybrown;}
+
+#contents .gallery ul li {
+  float:left;
+  width:30%;
+  margin-right: 5%;
+  background:peachpuff;
+}
+
+#contents .gallery ul li:last-child{
+  margin-right:0;
+}
+
+#contents .banner{background:blanchedalmond;}
+
+
+    #footer{
+      width:100%; height:100px;
+      background:blueviolet;
+    }
+
+    .footercontents{
+      float:left;
+      width:950px;
+    }
+
+    .footercontents li {
+      width:100%; height:50px;line-height:50px;text-align:center;
+    }
+
+    .footercontents li:nth-child(1){background:salmon;}
+    .footercontents li:nth-child(2){background:yellowgreen;}
+
+    .familysite{
+      text-align:center;
+      width:auto;
+      height:100px;
+      line-height:100px;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="wrap"> <!-- 전체 상자 -->
+    <header id="header">
+      <h1><a href="./index.html"><img src="" alt="logo"></a></h1>
+      <div class="nav">
+        <ul class="mainmenu"><!-- 전체영역 덮기 -->
+          <li><a href="#">menu1</a>
+            <ul class="submenu">
+              <li><a href="#">sub1-1</a></li>
+              <li><a href="#">sub1-2</a></li>
+              <li><a href="#">sub1-3</a></li>
+              <li><a href="#">sub1-4</a></li>
+            </ul>
+          </li>
+          <li><a href="#">menu2</a>
+            <ul class="submenu">
+              <li><a href="#">sub2-1</a></li>
+              <li><a href="#">sub2-2</a></li>
+              <li><a href="#">sub2-3</a></li>
+              <li><a href="#">sub2-4</a></li>
+            </ul>
+          </li>
+          <li><a href="#">menu3</a>
+            <ul class="submenu">
+              <li><a href="#">sub3-1</a></li>
+              <li><a href="#">sub3-2</a></li>
+              <li><a href="#">sub3-3</a></li>
+              <li><a href="#">sub3-4</a></li>
+            </ul>
+          </li>
+          <li><a href="#">menu4</a>
+            <ul class="submenu">
+              <li><a href="#">sub4-1</a></li>
+              <li><a href="#">sub4-2</a></li>
+              <li><a href="#">sub4-3</a></li>
+              <li><a href="#">sub4-4</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="submenubg"></div>
+      </div><!-- navigation-->
+    </header> <!-- 헤더 -->
+    <div id="imgSlide" class="clearfix">
+      <ul>
+        <li><img src="" alt="이미지01"></li>
+        <li><img src="" alt="이미지02"></li>
+        <li><img src="" alt="이미지03"></li>
+      </ul>
+    </div> <!-- 페이드 이미지 슬라이드 -->
+    <div id="contents" class="clearfix">
+      <div class="notice"> <!-- 레이어 팝업 : 공지사항 첫번째 -->
+        <h3>공지사항</h3>
+        <ul>
+          <li><a href="#">공지사항 1번째 내용입니다.</a></li>
+          <li><a href="#">공지사항 2번째 내용입니다.</a></li>
+          <li><a href="#">공지사항 3번째 내용입니다.</a></li>
+          <li><a href="#">공지사항 4번째 내용입니다.</a></li>
+        </ul>
+      </div>
+      <div class="gallery">
+        <h3>갤러리</h3>
+        <ul>
+          <li><a href="#"><img src="" alt="갤러리01"></a></li>
+          <li><a href="#"><img src="" alt="갤러리02"></a></li>
+          <li><a href="#"><img src="" alt="갤러리03"></a></li>
+        </ul>
+      </div>
+      <div class="banner"></div> <!-- 배너 -->
+    </div>
+    <footer id="footer">
+      <ul class="footercontents">
+        <li>하단메뉴</li>
+        <li>copyright</li>
+      </ul>
+      <div class="familysite">
+        패밀리사이트
+      </div>
+    </footer> <!-- 푸터 -->
+  </div>
+</body>
+</html>
