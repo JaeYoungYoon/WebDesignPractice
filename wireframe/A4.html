@@ -43,13 +43,14 @@
       background:cadetblue;
     }
 
-    #header .nav > ul {
+    #header .nav ul {
       text-align:center;
       position:absolute;
-      top:60px; left:7%;
+      top:60px; left:90px;
+      background:yellow;
     }
 
-    #header .nav > ul >li {
+    #header .nav ul li {
       float:left;
       width:200px;
       height:40px;
@@ -59,40 +60,43 @@
       font-size:18px;
     }
 
-    #header .nav ul >li>a:hover{
+    #header .nav ul li a:hover{
       background:#AAA;
       font-weight:bold;
     }
 
+   .subwrap{
+    /*display:none;*/
+    width:100%; height:160px;
+    background:greenyellow;
+   } 
+
+   .submenu{
     
-    #header .nav .submenubg{
-      position:absolute;
-      width:1200px; height:180px;
-      background:#EEE;
-      top:100px;
-      left:-250px;
-      /*display:none;*/
-      /*z-index:99;*/
-    }
+   float:right;
+    width:860px;
+    height:100%;
+    
+   }
 
+   .submenu ul {
+    float:left;
+    text-align:center;
+      
+     
+  }
+   
+   .submenu ul li {
 
-    #header .nav > ul > li > ul {
-      /*display:none;*/
-      background:#EEE;
-    }
-
-
-    #header .nav > ul > li > ul > li {
-      width:200px;
+    width:200px;
       height:40px;
       line-height:40px;
-      /*z-index:100;*/
-    }
-
-    #header .nav > ul > li > ul > li >a:hover{
-      background:#aaa;
-      font-weight:bold;
-    }
+  
+   }
+    
+   .submenu ul li a:hover{
+    background:#EEE;
+   }
 
 
    
@@ -174,49 +178,50 @@
     }
     
   </style>
+
 </head>
 <body>
   <div class="wrap"> <!-- 전체 상자 -->
     <header id="header">
       <h1><a href="./index.html"><img src="" alt="logo"></a></h1>
       <div class="nav">
-        <ul class="mainmenu"><!-- 전체영역 덮기 -->
-          <li><a href="#">menu1</a>
-            <ul class="submenu">
-              <li><a href="#">sub1-1</a></li>
-              <li><a href="#">sub1-2</a></li>
-              <li><a href="#">sub1-3</a></li>
-              <li><a href="#">sub1-4</a></li>
-            </ul>
-          </li>
-          <li><a href="#">menu2</a>
-            <ul class="submenu">
-              <li><a href="#">sub2-1</a></li>
-              <li><a href="#">sub2-2</a></li>
-              <li><a href="#">sub2-3</a></li>
-              <li><a href="#">sub2-4</a></li>
-            </ul>
-          </li>
-          <li><a href="#">menu3</a>
-            <ul class="submenu">
-              <li><a href="#">sub3-1</a></li>
-              <li><a href="#">sub3-2</a></li>
-              <li><a href="#">sub3-3</a></li>
-              <li><a href="#">sub3-4</a></li>
-            </ul>
-          </li>
-          <li><a href="#">menu4</a>
-            <ul class="submenu">
-              <li><a href="#">sub4-1</a></li>
-              <li><a href="#">sub4-2</a></li>
-              <li><a href="#">sub4-3</a></li>
-              <li><a href="#">sub4-4</a></li>
-            </ul>
-          </li>
+        <ul class="mainmenu"><!-- 전체 + 배경 -->
+          <li><a href="#">menu1</a></li>
+          <li><a href="#">menu2</a></li>
+          <li><a href="#">menu3</a></li>
+          <li><a href="#">menu4</a></li>
         </ul>
-        <div class="submenubg"></div>
       </div><!-- navigation-->
     </header> <!-- 헤더 -->
+    <div class="subwrap" style="display:none;">
+      <div class="submenu">
+        <ul class="sub1">
+          <li><a href="#">sub1-1</a></li>
+          <li><a href="#">sub1-2</a></li>
+          <li><a href="#">sub1-3</a></li>
+          <li><a href="#">sub1-4</a></li>
+        </ul>
+        <ul class="sub2">
+          <li><a href="#">sub2-1</a></li>
+          <li><a href="#">sub2-2</a></li>
+          <li><a href="#">sub2-3</a></li>
+          <li><a href="#">sub2-4</a></li>
+        </ul>
+        <ul class="sub3">
+          <li><a href="#">sub3-1</a></li>
+          <li><a href="#">sub3-2</a></li>
+          <li><a href="#">sub3-3</a></li>
+          <li><a href="#">sub3-4</a></li>
+        </ul>
+        <ul class="sub4">
+          <li><a href="#">sub4-1</a></li>
+          <li><a href="#">sub4-2</a></li>
+          <li><a href="#">sub4-3</a></li>
+          <li><a href="#">sub4-4</a></li>
+        </ul>
+      </div>
+    </div><!--navigation submenu-->
+
     <div id="imgSlide" class="clearfix">
       <ul>
         <li><img src="" alt="이미지01"></li>
