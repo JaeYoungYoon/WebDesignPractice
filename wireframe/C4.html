@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>C3 Wireframe</title>
+  <title>C4 Wireframe</title>
   <style>
     
 * {
@@ -160,37 +160,22 @@ a {
   margin-right:0;
 }
 
-#contents .banner{background:blanchedalmond;}
+#contents .shortcut{background:blanchedalmond;}
 
-#footer {
-  width: 800px;
-  height:100px;
-  text-align: center;
-}
+#footer{
+      width:100%; height:100px;
+      background:blueviolet;
+    }
 
-#footer .logo {
-  float:left;
-  width: 200px;
-  height: 100px;
-  line-height: 100px;
- background:firebrick;
-}
+#footer div{float:left;}
 
-#footer .footermenu {
-  width: 100%;
-  height: 50px;
-  line-height: 50px;
-  background:burlywood;
-}
+    #footer .logo{
+      width:200px;
+      height:100px;
+    }
 
-#footer .copyright {
-  width: 100%;
-  height: 50px;
-  line-height: 50px;
-  background:paleturquoise;
-}
-
-
+    #footer .copyright{width:calc(100% - 450px); height:100px; background:red;}
+    #footer .familysite{width:250px; height:100px; background:skyblue;}
   </style>
 
 </head>
@@ -220,6 +205,7 @@ a {
               <li><a href="#">항목3-1</a></li>
               <li><a href="#">항목3-2</a></li>
               <li><a href="#">항목3-3</a></li>
+              <li><a href="#">항목3-4</a></li>
             </ul>
           </li>
           <li><a href="#">항목4</a>
@@ -234,7 +220,7 @@ a {
     </aside><!-- side -->
 
     <section id="content">
-      <section id="banner" class="imgSlide"> <!-- 좌우 슬라이드 -->
+      <section id="banner" class="imgSlide"> <!-- 좌우슬라이드 -->
         <ul class="slidelist">
           <li><img src="" alt="img01"></li>
           <li><img src="" alt="img02"></li>
@@ -260,24 +246,16 @@ a {
             <li><a href="#"><img src="" alt="갤러리3"></a></li>
           </ul>
         </div>
-        <div class="banner">
-          <h3>배너</h3>
+        <div class="shortcut">
+          <h3>바로가기</h3>
         </div>
       </section>
 
       <footer id="footer">
-        <div class="logo">
-          <a href="./index.html"><img src="" alt="logo_gray"></a>
-        </div>
-
-        <div class="footermenu">
-          하단메뉴
-        </div>
-        <div class="copyright">
-          Copyright
-        </div>
-        
-      </footer>
+        <div class="logo"><a href="./index.html"><img src="" alt="logo_gray"></a></div>
+        <div class="copyright"></div>
+        <div class="familysite"></div>
+      </footer> <!-- 푸터 -->
     </section>
   </div>
 </body>
