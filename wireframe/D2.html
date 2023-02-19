@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D2 Wireframe</title>
+
+  <style>
+    * {
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color:#333;
+}
+
+body {
+    width: 100%;
+    height: 950px;
+}
+
+
+.clearfix{
+  clear:both;
+  display:block;
+  content:"";
+}
+
+#header {
+    width: 200px;
+    height: 650px;
+    float: left;
+    background-color: aqua;
+}
+
+#header .logo {
+    width: 200px;
+    height: 100px;
+    background-color: aquamarine;
+}
+
+.menu {
+    width: 200px;
+    background-color: blue;
+}
+
+.mainmenu {
+  width: 100%;
+}
+
+.mainmenu li {
+  position: relative;
+  font-weight: bold;
+  text-align:center;
+}
+
+.mainmenu li a {
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+}
+
+.mainmenu li a:hover {
+  background-color: peachpuff;
+}
+
+.submenu {
+  display:none;
+  background: greenyellow;
+}
+
+.submenu li a {
+  width: 100%;
+}
+
+.submenu li a:hover {
+  background: yellow;
+}
+
+
+#wrap{
+  float:right;
+  width:calc(100% - 200px);
+  height:650px;
+}
+
+.imgSlide{
+  float:left;
+  width:calc(100% - 230px);
+  height:400px;
+  background:lightcoral;
+}
+
+.banner{
+  float:right;
+  width:230px;
+  height:400px;
+  background:lightgreen;
+}
+
+#contents{
+  width:100%;
+  height:250px;
+  /*background:rebeccapurple;*/
+}
+
+#contents div{
+  float:left;
+  width:50%; height:100%;
+  background:cornflowerblue;
+}
+
+#contents h3 {
+  display:inline-block;
+  text-align:center;
+  background:yellow;
+  padding:10px 30px;
+}
+
+#contents .notice ul{
+  /*background:lightcyan;*/
+  width:80%;
+}
+
+#contents .notice ul li {
+  width:100%; height:45px;
+  line-height:45px;
+  list-style: circle;
+  border-bottom:1px solid #CCC;
+}
+
+
+
+#footer {
+    width: 100%;
+    height: 100px;
+}
+
+#footer .logo {
+    width: 200px;
+    height: 100px;
+    float: left;
+    background-color: lightgrey;
+}
+
+.copyright {
+    float: left;
+    width: calc(100% - 400px);
+    height: 100px;
+    line-height:100px;
+    text-align: center;
+    background-color: deeppink;
+}
+
+.familysite {
+    float: left;
+    width: 200px;
+    height: 100px;
+    line-height:100px;
+    text-align:center;
+    background-color: chartreuse;
+}
+
+  </style>
+</head>
+<body>
+  <header id="header">
+    <h1 class="logo">
+      <a href="./index.html"><img src="" alt="logo"></a>
+    </h1>
+    <nav>
+      <ul class="mainmenu">
+        <li><a href="#">menu1</a>
+          <ul class="submenu">
+            <li><a href="#">sub1-1</a></li>
+            <li><a href="#">sub1-2</a></li>
+            <li><a href="#">sub1-3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">menu2</a>
+          <ul class="submenu">
+            <li><a href="#">sub2-1</a></li>
+            <li><a href="#">sub2-2</a></li>
+            <li><a href="#">sub2-3</a></li>
+            <li><a href="#">sub2-4</a></li>
+          </ul>
+        </li>
+        <li><a href="#">menu3</a>
+          <ul class="submenu">
+            <li><a href="#">sub3-1</a></li>
+            <li><a href="#">sub3-2</a></li>
+            <li><a href="#">sub3-3</a></li>
+            <li><a href="#">sub3-4</a></li>
+          </ul>
+        </li>
+        <li><a href="#">menu4</a>
+          <ul class="submenu">
+            <li><a href="#">sub4-1</a></li>
+            <li><a href="#">sub4-2</a></li>
+            <li><a href="#">sub4-3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="wrap">
+    <div class="imgSlide"><!-- 좌우 슬라이드 -->
+      <ul class="slides">
+        <li><a href="#"><img src="" alt="img01"></a></li>
+        <li><a href="#"><img src="" alt="img02"></a></li>
+        <li><a href="#"><img src="" alt="img03"></a></li>
+      </ul>
+    </div>
+
+    <div class="banner">
+      배너
+    </div>
+
+    <div id="contents" class="clearfix">
+     <div class="notice">
+      <h3>공지사항</h3>
+      <ul>
+        <li><a href="#">Lorem ipsum</a></li><!-- 공지 첫번째에 팝업 -->
+        <li><a href="#">Lorem ipsum</a></li>
+        <li><a href="#">Lorem ipsum</a></li>
+        <li><a href="#">Lorem ipsum</a></li>
+      </ul>
+     </div>
+     <div class="gallery">
+      <h3>갤러리</h3>
+      <ul>
+        <li><a href="#"><img src="" alt="g01"></a></li>
+        <li><a href="#"><img src="" alt="g02"></a></li>
+        <li><a href="#"><img src="" alt="g03"></a></li>
+      </ul>
+     </div>
+    </div>
+
+  </div>
+
+
+  <footer id="footer" class="clearfix">
+    <h4 class="logo">
+      <a href="./index.html"><img src="" alt="logo_gray"></a>
+    </h4>
+    <div class="copyright">
+        카피라이터
+    </div>
+    <div class="familysite">
+        패밀리사이트
+    </div>
+</footer>
+
+</body>
+</html>
