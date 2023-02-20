@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>D1 Wireframe</title>
+  <title>D3 Wireframe</title>
 
   <style>
     * {
     padding: 0;
     margin: 0 auto;
     list-style: none;
-    
+    box-sizing:border-box;
 }
 
 a {
@@ -61,8 +61,8 @@ body {
 }
 
 .mainmenu li a {
-  height: 40px;
-  line-height: 40px;
+  height: 75px;
+  line-height: 75px;
   font-size: 18px;
 }
 
@@ -72,7 +72,18 @@ body {
 
 .submenu {
   /*display:none;*/
-  background: greenyellow;
+  position: absolute;
+  top: 0;
+  left:200px;
+  width:calc(100vw - 200px);
+  background:rgba(255,255,255,0.4);
+  overflow:hidden;
+  z-index:100;
+}
+
+.submenu li {
+  float:left;
+  width:200px; height:75px; line-height:75px;
 }
 
 .submenu li a {
@@ -104,16 +115,11 @@ display:inline-block;
   color: blue;
 }
 
-
-
-
-
 #wrap {
     float: right;
     width: calc(100% - 200px);
     height: 850px;
 }
-
 
 .imgslide { 
   width: 100%;
@@ -182,22 +188,37 @@ display:inline-block;
     background-color: lightgrey;
 }
 
-.copyright {
-    float: left;
-    width: calc(100% - 400px);
-    height: 100px;
-    line-height:100px;
-    text-align: center;
-    background-color: deeppink;
+.footermenu{
+  float: left;
+    width: calc(100% - 200px);
+    height: 50px;
+    line-height:50px;
+    /*background-color:aquamarine;*/
+   border-bottom:1px dotted #777; 
 }
 
-.sns {
+.footermenu ul {
+ width:calc(100% - 60px);
+ height:100%; 
+}
+
+.footermenu ul li {
+  float: left;
+  padding:0px 10px;
+  border-right:1px solid #AAA;
+}
+
+.footermenu ul li:last-child{
+  border:none;
+}
+
+.copyright {
     float: left;
-    width: 200px;
-    height: 100px;
-    line-height:100px;
-    text-align:center;
-    background-color: chartreuse;
+    width: calc(100% - 200px);
+    height: 50px;
+    line-height:50px;
+    text-align: center;
+    /*background-color: deeppink;*/
 }
   </style>
 </head>
@@ -219,6 +240,7 @@ display:inline-block;
                 <li><a href="#">sub2-1</a></li>
                 <li><a href="#">sub2-2</a></li>
                 <li><a href="#">sub2-3</a></li>
+                <li><a href="#">sub2-4</a></li>
               </ul>
             </li>
             <li><a href="#">menu3</a>
@@ -233,6 +255,7 @@ display:inline-block;
               <ul class="submenu">
                 <li><a href="#">sub4-1</a></li>
                 <li><a href="#">sub4-2</a></li>
+                <li><a href="#">sub4-3</a></li>
               </ul>
             </li>
           </ul>
@@ -246,7 +269,7 @@ display:inline-block;
 
 <div id="wrap">
 
-  <div class="imgslide" class="clearfix"><!-- 상하 슬라이드 -->
+  <div class="imgslide" class="clearfix"><!-- fade -->
     <ul>
       <li><a href="#"><img src="" alt="img01"></a></li>
       <li><a href="#"><img src="" alt="img02"></a></li>
@@ -292,11 +315,19 @@ display:inline-block;
     <h4 class="logo">
       <a href="./index.html"><img src="" alt="logo_gray"></a>
     </h4>
+
+    <div class="footermenu">
+      <ul>
+        <li><a href="#">FOOTERMENU1</a></li>
+        <li><a href="#">FOOTERMENU2</a></li>
+        <li><a href="#">FOOTERMENU3</a></li>
+        <li><a href="#">FOOTERMENU4</a></li>
+        <li><a href="#">FOOTERMENU5</a></li>
+        <li><a href="#">FOOTERMENU6</a></li>
+      </ul>
+    </div>
     <div class="copyright">
         카피라이터
-    </div>
-    <div class="sns">
-        SNS
     </div>
 </footer>
 </body>
