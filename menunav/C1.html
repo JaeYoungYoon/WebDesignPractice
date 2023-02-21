@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C1 Menu Navigation</title>
+  <style>
+    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-size:18px;
+}
+a {
+  display:block;
+  text-decoration: none;
+  color: #333;
+}
+
+.clearfix::before,
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+#wrap {
+  width: 1000px;
+  height:650px;
+}
+#side {
+  float: left;
+  width: 200px;
+  text-align: center;
+}
+#content {
+  float: right;
+  width: 800px;
+}
+
+#side .logo {
+  width: 200px;
+  height: 100px;
+  line-height: 100px;
+  
+}
+
+#side .nav {
+  width: 200px;
+  height: 700px;
+  line-height: 700px;
+  
+}
+#side .nav li {
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+#side .nav li a {
+  height: 40px;
+  line-height: 40px;
+  display: block;
+  font-size: 18px;
+  color: #ffff00;
+  background-color: #777777;
+  font-weight:bold;
+}
+
+
+#side .nav .submenu {
+  display:none;  
+
+}
+
+#side .nav .submenu li {
+  background: #EEE;
+}
+
+#side .nav .submenu li a{
+  color:#EEEEEE;
+  font-weight:normal;
+}
+
+#side .nav .submenu a:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#banner {
+  width: 800px;
+  height: 350px;
+  line-height: 350px;
+  text-align: center;
+}
+
+.imgSlide {
+  overflow: hidden;
+  position: relative;
+  background:lightgray;
+}
+.slidelist {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.slidelist li {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background:forestgreen;
+}
+
+.slidelist li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#contents {
+  width: 800px;
+  height:200px;
+}
+#contents div {
+  float: left;
+  width: 33.333333%;
+  height: 100%;
+  text-align: center;
+ 
+}
+.tabmenu{
+  
+  background-color: pink;
+}
+
+
+
+.banner {
+  background: red;
+}
+
+.shortcut {
+  background: chartreuse;
+}
+
+#footer {
+  width: 800px;
+  height:100px;
+  text-align: center;
+}
+
+#footer .logo {
+  float:left;
+  width: 200px;
+  height: 100px;
+  line-height: 100px;
+ background:firebrick;
+}
+#footer .copyright {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background:paleturquoise;
+}
+#footer .sns {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background:burlywood;
+}
+
+  </style>
+
+</head>
+
+<body>
+  <div id="wrap">
+    <aside id="side"><!-- side -->
+      <h1 class="logo"></h1>
+      <nav class="nav">
+        <ul class="mainmenu">
+          <li><a href="#">이용안내</a>
+            <ul class="submenu">
+              <li><a href="#">이용방법</a></li>
+              <li><a href="#">이용시간</a></li>
+              <li><a href="#">이용요금</a></li>
+            </ul>
+          </li>
+          <li><a href="#">이벤트정보</a>
+            <ul class="submenu">
+              <li><a href="#">현장이벤트</a></li>
+              <li><a href="#">온라인이벤트</a></li>
+              <li><a href="#">이벤트예약</a></li>
+            </ul>
+          </li>
+          <li><a href="#">프로그램</a>
+            <ul class="submenu">
+              <li><a href="#">프로그램안내</a></li>
+              <li><a href="#">온라인예약</a></li>
+              <li><a href="#">단체예약싱담</a></li>
+            </ul>
+          </li>
+          <li><a href="#">고객센터</a>
+            <ul class="submenu">
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">자주묻는질문</a></li>
+              <li><a href="#">자료실</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside><!-- side -->
+
+    <section id="content">
+      <section id="banner" class="imgSlide"> <!-- 페이드 -->
+        
+      </section>
+
+      <section id="contents" class="clearfix">
+        <div class="tabmenu"> <!-- 탭메뉴로 공지사항, 갤러리 -->
+          
+        </div>
+        <div class="banner">
+          
+        </div>
+        <div class="shortcut">
+          
+        </div>
+      </section>
+
+      <footer id="footer">
+        <div class="logo">
+          
+        </div>
+        <div class="copyright">
+          
+        </div>
+        <div class="sns">
+          
+        </div>
+      </footer>
+    </section>
+  </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    
+    $(".mainmenu > li").hover(function(){
+      $(this).find(".submenu").stop().slideDown();
+    }, function(){
+      $(this).find(".submenu").stop().slideUp();
+    });
+  });
+</script>
+</html>
+
+
+
+</html>
