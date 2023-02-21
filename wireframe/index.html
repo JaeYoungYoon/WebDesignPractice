@@ -8,6 +8,7 @@
   <style>
     *{
       margin:0 auto;; padding:0; list-style:none;
+      box-sizing:border-box;
     }
     a{
       text-decoration: none;
@@ -23,6 +24,16 @@ a:hover{
       clear:both;
       display:block;
       content:"";
+    }
+
+    p{
+      width:80%;
+      height:100px;
+      line-height:70px;
+      background:lightgray;
+      padding:15px;
+      margin-bottom:20px;
+      font-size:18px;
     }
 
     #title, #content{
@@ -58,6 +69,9 @@ a:hover{
 </head>
 <body>
   <h1 id="title">Wireframe 모음</h1>
+  <p>
+    해당 페이지는 img 태그에 주소 경로를 삽입하지 않아 웹 접근성 검사를 진행할 경우 오류가 나는 페이지입니다. 단순 확인용으로만 열람하시길 바랍니다.
+  </p>
   <ul id="content" class="clearfix">
     <li id="complete"><a href="./A1.html">A1</a></li>
     <li id="complete"><a href="./A2.html">A2</a></li>
@@ -75,7 +89,7 @@ a:hover{
     <li id="complete"><a href="./D2.html">D2</a></li>
     <li id="complete"><a href="./D3.html">D3</a></li>
     <li id="complete"><a href="./D4.html">D4</a></li>
-    <li><a href="./E1.html">E1</a></li>
+    <li id="complete"><a href="./E1.html">E1</a></li>
     <li><a href="./E2.html">E2</a></li>
     <li><a href="./E3.html">E3</a></li>
     <li><a href="./E4.html">E4</a></li>
