@@ -15,11 +15,7 @@
       color:#333;
     }
 
-a:hover{
-  font-size:1.5rem;
-  font-weight:bold;
-  text-decoration: underline;
-}
+
 .clearfix::after, .clearfix::before{
       clear:both;
       display:block;
@@ -56,7 +52,7 @@ a:hover{
       width:25%;
       height:100px;
       line-height:100px;
-      opacity:0.5;
+      opacity:0.75;
     }
 
     .complete{
@@ -65,6 +61,11 @@ a:hover{
 
     .complete a{
       font-weight:bold;
+    }
+
+    .complete a:hover{
+      font-size:1.5rem;
+      text-decoration: underline;
     }
 
     #allslidehorizon{
@@ -81,6 +82,14 @@ a:hover{
 
     #thisslidevertical{
       background-color:salmon;
+    }
+
+    #thissliderightvertical{
+      background-color: lightpink;
+    }
+
+    #subbgvertical{
+      background-color:plum;
     }
 
   </style>
@@ -102,17 +111,17 @@ a:hover{
     <li id="thisslidehorizon"><a href="./B3.html">B3</a></li>
     <li id="subbghorizon"><a href="./B4.html">B4</a></li>
     <li id="thisslidevertical" class="complete"><a href="./C1.html">C1</a></li>
-    <li><a href="./C2.html">C2</a></li>
-    <li><a href="./C3.html">C3</a></li>
-    <li><a href="./C4.html">C4</a></li>
-    <li><a href="./D1.html">D1</a></li>
-    <li><a href="./D2.html">D2</a></li>
-    <li><a href="./D3.html">D3</a></li>
-    <li><a href="./D4.html">D4</a></li>
-    <li><a href="./E1.html">E1</a></li>
-    <li><a href="./E2.html">E2</a></li>
-    <li><a href="./E3.html">E3</a></li>
-    <li><a href="./E4.html">E4</a></li>
+    <li id="thisslidevertical"><a href="./C2.html">C2</a></li>
+    <li id="thissliderightvertical"><a href="./C3.html">C3</a></li>
+    <li id="thissliderightvertical"><a href="./C4.html">C4</a></li>
+    <li id="thisslidevertical"><a href="./D1.html">D1</a></li>
+    <li id="thisslidevertical"><a href="./D2.html">D2</a></li>
+    <li id="subbgvertical"><a href="./D3.html">D3</a></li>
+    <li id="subbgvertical"><a href="./D4.html">D4</a></li>
+    <li id="thisslidevertical"><a href="./E1.html">E1</a></li>
+    <li id="thisslidevertical"><a href="./E2.html">E2</a></li>
+    <li id="thissliderightvertical"><a href="./E3.html">E3</a></li>
+    <li id="thissliderightvertical"><a href="./E4.html">E4</a></li>
   </ul>
 </body>
 </html>
