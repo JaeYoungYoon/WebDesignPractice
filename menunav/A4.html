@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A4 Wireframe</title>
+  <style>
+    *{
+      margin:0 auto;; padding:0; list-style:none;
+    }
+    a{
+      text-decoration: none;
+      color:#333;
+      display:block;
+    }
+
+    .clearfix{
+      clear:both;
+      display:block;
+      content:"";
+    }
+
+    .wrap{
+      width:1200px;
+      height:700px;
+      margin:0 auto;
+    }
+
+    #header{
+      width:100%; height:100px;
+    }
+
+    #header h1{float:left; text-align:center; width:250px;
+    height:100px; line-height:100px; background-color: antiquewhite;}
+    
+    #header .nav{
+      float:right;
+      position:relative;
+      width:950px;height:100px;
+      background:rgba(0,0,0,0.5);
+    }
+
+    #header .nav > ul {
+      text-align:center;
+      position:absolute;
+      top:60px; left:90px;
+      
+    }
+
+    #header .nav > ul > li {
+      float:left;
+      width:200px;
+      height:40px;
+      line-height:40px;
+      font-size:18px;
+    }
+
+    #header .nav > ul > li > a{
+      background:#AAA;
+      font-weight:bold;
+    }
+
+    #header .submenu{
+      display:none;
+      position:absolute;
+      background:lightgoldenrodyellow;
+      z-index:10;
+    }
+
+    .submenu > li{
+      width:200px;
+      height:40px;
+      line-height:40px;
+    }
+
+    .submenu > li >a:hover{
+      background:yellowgreen;
+      font-weight:bold;
+    }
+
+   .subbg{
+    display:none;
+    position:absolute;
+    width:1200px; height:120px;
+    background:lightgoldenrodyellow;
+    z-index:9;
+   } 
+    #imgSlide{
+      width:100%; height:300px;
+      background:pink;
+    }
+
+    #imgSlide .slides{
+      position:relative;
+      width:100%; height:100%;
+    }
+
+    #imgSlide .slides li {
+      position:absolute;
+      top:0; left:0;
+      width:100%; height:100%;
+    }
+
+    #contents{
+      width:100%; 
+      height:200px;
+      /*background:yellowgreen;*/
+    }
+#contents div{
+  float:left;
+  width:33.3333%;
+  height:100%;
+}
+
+
+
+#contents h3 {
+  display:inline-block;
+  background:yellow;
+  padding:10px 30px;
+}
+
+
+#contents .notice{background:yellowgreen;}
+
+#contents .notice ul li {
+  margin-left:50px;
+  list-style:circle;
+  padding-bottom:15px;
+}
+
+#contents .notice ul li a:hover{
+  text-decoration:underline;
+}
+
+#contents .gallery{background:sandybrown;}
+
+#contents .gallery ul li {
+  float:left;
+  width:30%;
+  margin-right: 5%;
+  background:peachpuff;
+}
+
+#contents .gallery ul li:last-child{
+  margin-right:0;
+}
+
+#contents .banner{background:blanchedalmond;}
+
+
+    #footer{
+      width:100%; height:100px;
+      background:blueviolet;
+    }
+
+    .footercontents{
+      float:left;
+      width:950px;
+    }
+
+    .footercontents li {
+      width:100%; height:50px;line-height:50px;text-align:center;
+    }
+
+    .footercontents li:nth-child(1){background:salmon;}
+    .footercontents li:nth-child(2){background:yellowgreen;}
+
+    .familysite{
+      text-align:center;
+      width:auto;
+      height:100px;
+      line-height:100px;
+    }
+    
+  </style>
+
+</head>
+<body>
+  <div class="wrap"> <!-- 전체 상자 -->
+    <header id="header">
+      <h1></h1>
+      <div class="nav">
+        <ul class="mainmenu"><!-- 전체 + 배경 -->
+          <li><a href="#">회사소개</a>
+            <ul class="submenu">
+              <li><a href="#">인사말</a></li>
+              <li><a href="#">조직구성도</a></li>
+              <li><a href="#">오시는길</a></li>
+            </ul>
+          </li>
+          <li><a href="#">사업영역</a>
+            <ul class="submenu">
+              <li><a href="#">전원주택</a></li>
+              <li><a href="#">도시재생</a></li>
+              <li><a href="#">인테리어</a></li>
+            </ul>
+          </li>
+          <li><a href="#">입주정보</a>
+            <ul class="submenu">
+              <li><a href="#">입주단지</a></li>
+              <li><a href="#">입주캘린더</a></li>
+            </ul>
+          </li>
+          <li><a href="#">고객센터</a>
+            <ul class="submenu">
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">건축상담</a></li>
+              <li><a href="#">홍보자료실</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- navigation-->
+    </header> <!-- 헤더 -->
+    <div class="subbg"></div>
+
+    <div id="imgSlide" class="clearfix">
+      
+    </div> <!-- 페이드 이미지 슬라이드 -->
+    <div id="contents" class="clearfix">
+      <div class="notice"> <!-- 레이어 팝업 : 공지사항 첫번째 -->
+        
+      </div>
+      <div class="gallery">
+        
+      </div>
+      <div class="banner"></div> <!-- 배너 -->
+    </div>
+    <footer id="footer">
+      <ul class="footercontents">
+        <li></li>
+        <li></li>
+      </ul>
+      <div class="familysite">
+        
+      </div>
+    </footer> <!-- 푸터 -->
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      
+      $(".mainmenu > li").mouseover(function(){
+        $(".submenu, .subbg").stop().slideDown();
+      }).mouseout(function(){
+        $(".submenu, .subbg").stop().slideUp();
+      });
+    });
+  </script>
+</body>
+</html>
