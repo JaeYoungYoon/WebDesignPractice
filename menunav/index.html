@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin:0 auto;; padding:0; list-style:none;
+      box-sizing:border-box;
+    }
+    a{
+      text-decoration: none;
+      color:#333;
+    }
+
+a:hover{
+  font-size:1.5rem;
+  font-weight:bold;
+  text-decoration: underline;
+}
+.clearfix::after, .clearfix::before{
+      clear:both;
+      display:block;
+      content:"";
+    }
+
+    p{
+      width:80%;
+      
+      line-height:70px;
+      background:lightgray;
+      padding:15px;
+      margin-bottom:20px;
+      font-size:18px;
+    }
+
+    #title, #content{
+      text-align:center;
+    }
+
+    #title{
+      margin-top:30px;
+      margin-bottom:30px;
+    }
+
+    #content{
+      width:80%;
+      box-sizing: border-box;
+      border:5px solid #AAA;
+    }
+
+    ul li {
+      float:left;
+      width:25%;
+      height:100px;
+      line-height:100px;
+    }
+
+    #complete{
+      background-color:orchid;
+    }
+
+    #check{
+      background:peru;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="title">Menu Navigation 작업 모음</h1>
+  <p>
+    메뉴 내비게이션의 동작을 연습하는 페이지입니다<br>
+    해당 페이지는 img 태그에 주소 경로를 삽입하지 않아 웹 접근성 검사를 진행할 경우 오류가 나는 페이지입니다. 단순 확인용으로만 열람하시길 바랍니다.<br>
+    넓은 화면을 지원하는 디바이스에서 보는 것을 권장합니다. (1200px 이상)
+  </p>
+  <ul id="content" class="clearfix">
+    <li id="complete"><a href="./A1.html">A1</a></li>
+    <li><a href="./A2.html">A2</a></li>
+    <li id="complete"><a href="./A3.html">A3</a></li>
+    <li><a href="./A4.html">A4</a></li>
+    <li><a href="./B1.html">B1</a></li>
+    <li><a href="./B2.html">B2</a></li>
+    <li><a href="./B3.html">B3</a></li>
+    <li><a href="./B4.html">B4</a></li>
+    <li><a href="./C1.html">C1</a></li>
+    <li><a href="./C2.html">C2</a></li>
+    <li><a href="./C3.html">C3</a></li>
+    <li><a href="./C4.html">C4</a></li>
+    <li><a href="./D1.html">D1</a></li>
+    <li><a href="./D2.html">D2</a></li>
+    <li><a href="./D3.html">D3</a></li>
+    <li><a href="./D4.html">D4</a></li>
+    <li><a href="./E1.html">E1</a></li>
+    <li><a href="./E2.html">E2</a></li>
+    <li><a href="./E3.html">E3</a></li>
+    <li><a href="./E4.html">E4</a></li>
+  </ul>
+</body>
+</html>
