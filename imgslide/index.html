@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin:0 auto;; padding:0; list-style:none;
+      box-sizing:border-box;
+    }
+    a{
+      text-decoration: none;
+      color:#333;
+    }
+
+.clearfix::after, .clearfix::before{
+      clear:both;
+      display:block;
+      content:"";
+    }
+
+    p{
+      width:80%;
+      
+      line-height:70px;
+      background:lightgray;
+      padding:15px;
+      margin-bottom:20px;
+      font-size:18px;
+    }
+
+    #title, #content{
+      text-align:center;
+    }
+
+    #title{
+      margin-top:30px;
+      margin-bottom:30px;
+    }
+
+    #content{
+      width:80%;
+      box-sizing: border-box;
+      border:5px solid #AAA;
+    }
+
+    ul li {
+      float:left;
+      width:25%;
+      height:100px;
+      line-height:100px;
+      opacity:0.5;
+    }
+
+    #horizontal{background:darkorange;} /*좌우*/
+
+    #vertical{background:darkorchid;} /*상하*/
+
+    #fade{background: darkcyan;}
+
+    .complete{
+      opacity:1.0;
+
+    }
+
+    .complete a:hover{
+  font-size:1.5rem;
+  font-weight:bold;
+  text-decoration: underline;
+}
+  </style>
+</head>
+<body>
+  <h1 id="title">Image Slide Script 모음</h1>
+  <p>
+    해당 페이지는 B그룹 이미지 스크립트 작에에 대한 내용민을 담고 있습니다. 단순 확인용으로만 열람하시길 바랍니다.<br>
+    상하 슬라이드, 좌우 슬라이드, 페이드 형태 3가지 종류가 출제되며,<br>
+    이미지가 돌아가지 않으면 실격처리가 될 정도로 필수적인 코스로 자리매김 하고 있습니다.<br>
+    넓은 화면을 지원하는 디바이스에서 보는 것을 권장합니다. (1200px 이상)
+  </p>
+  <ul id="content" class="clearfix">
+    <li id="vertical"><a href="./A1.html">A1</a></li>
+    <li id="horizontal"><a href="./A2.html">A2</a></li>
+    <li id="fade"><a href="./A3.html">A3</a></li>
+    <li id="fade"><a href="./A4.html">A4</a></li>
+    <li id="horizontal"><a href="./B1.html">B1</a></li>
+    <li id="vertical"><a href="./B2.html">B2</a></li>
+    <li id="vertical"><a href="./B3.html">B3</a></li>
+    <li id="vertical"><a href="./B4.html">B4</a></li>
+    <li id="fade"><a href="./C1.html">C1</a></li>
+    <li id="fade"><a href="./C2.html">C2</a></li>
+    <li id="horizontal"><a href="./C3.html">C3</a></li>
+    <li id="horizontal"><a href="./C4.html">C4</a></li>
+    <li id="vertical"><a href="./D1.html">D1</a></li>
+    <li id="horizontal"><a href="./D2.html">D2</a></li>
+    <li id="fade"><a href="./D3.html">D3</a></li>
+    <li id="fade"><a href="./D4.html">D4</a></li>
+    <li id="horizontal"><a href="./E1.html">E1</a></li>
+    <li id="vertical"><a href="./E2.html">E2</a></li>
+    <li id="vertical"><a href="./E3.html">E3</a></li>
+    <li id="horizontal"><a href="./E4.html">E4</a></li>
+  </ul>
+</body>
+</html>
