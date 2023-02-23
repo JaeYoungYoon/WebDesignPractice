@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A1 Contents</title>
+  <style>
+    *{
+      margin:0 auto;; padding:0; list-style:none;
+      box-sizing: border-box;
+      font-size:20px;
+    }
+    a{
+      text-decoration: none;
+      color:#333;
+      display:block;
+      
+    }
+
+    .clearfix::after, .clearfix::before{
+      clear:both;
+      display:block;
+      content:"";
+    }
+
+    .wrap{
+      width:1200px;
+      height:700px;
+      margin:0 auto;
+    }
+
+    #header{
+      width:100%; height:100px;
+      /*background-color: orange;*/
+    }
+
+    #header h1{float:left; text-align:center; width:250px;
+    height:100px; line-height:100px; background-color: antiquewhite;}
+    
+    #header .nav{
+      float:right;
+      width:950px;height:100px;
+      position:relative;
+
+      background:cadetblue;
+    }
+
+
+    #imgSlide{
+      width:100%; height:300px;
+      background:pink;
+    }
+
+    #contents{
+      width:100%; 
+      height:200px;
+      /*background:yellowgreen;*/
+    }
+#contents div{
+  float:left;
+  width:33.3333%;
+  height:100%;
+  padding:10px;
+}
+
+#contents .tabmenu{
+  /*background:rgba(0,0,0,0.3);*/
+}
+
+.tabmenu .tabbtn{
+  display:inline-block;
+  width:100%;
+  /*background:#333;*/
+  margin-bottom:10px;
+}
+
+.tabmenu .tabbtn li {
+  display:inline-block;
+  width:100px; height:40px; line-height:40px;
+  background:#AAA;
+  text-align:center;
+}
+
+.tabmenu .tabbtn li.active{
+  background:darkorange;
+}
+
+.tabmenu .tabbtn li a{
+  font-weight:bold;
+  color:#333;
+}
+
+.tabmenu .tab1 {
+  /*background:cyan;*/
+  overflow:hidden;
+}
+
+.tabmenu .tab1 li {
+  list-style:circle;
+  padding:5px 0;
+  border-bottom:1px solid #AAA;
+  margin-left:30px;
+}
+
+.tabmenu .tab1 li a{
+  font-size:17px;
+}
+
+.tabmenu .tab1 li a:hover{
+  background:rgba(0,0,0,0.2);
+}
+
+.tabmenu .tab2 li {
+  float:left;
+  width:30%; margin-right:5%;
+  background:yellow;
+}
+
+.tabmenu .tab2 li:last-child{
+  margin:0;
+}
+
+#contents .banner{background:blanchedalmond;}
+
+#contents .shortcut{background:aquamarine;}
+
+
+    #footer{
+      width:100%; height:100px;
+      background:blueviolet;
+    }
+
+#footer div{float:left;}
+
+    #footer .logo{
+      width:250px;
+      height:100px;
+    }
+
+    #footer .copyright{width:700px; height:100px; background:red;}
+    #footer .sns{width:250px; height:100px;}
+  </style>
+</head>
+<body>
+  <div class="wrap"> <!-- 전체 상자 -->
+    <header id="header">
+      <h1></h1>
+      <div class="nav">
+       
+      </div>
+    </header> <!-- 헤더 -->
+    <div id="imgSlide" class="clearfix">
+      
+    </div> 
+    <div id="contents" class="clearfix">
+      <div class="tabmenu"> <!-- 탭메뉴로 공지사항, 갤러리 -->
+        <ul class="tabbtn">
+          <li class="active"><a href="#">공지사항</a></li>
+          <li><a href="#">갤러리</a></li>
+        </ul>
+        <ul class="tab1">
+          <li><a href="#">공지사항 첫번째</a></li><!-- 레이어 팝업 : 공지사항 첫번째 메뉴 -->
+          <li><a href="#">공지사항 두번째</a></li>
+          <li><a href="#">공지사항 세번째</a></li>
+        </ul>
+        <ul class="tab2">
+          <li><a href="#"><img src="" alt="갤러리1"></a></li>
+          <li><a href="#"><img src="" alt="갤러리2"></a></li>
+          <li><a href="#"><img src="" alt="갤러리3"></a></li>
+        </ul>
+      </div>
+      <div class="banner"></div> <!-- 배너 -->
+      <div class="shortcut"></div> <!-- 바로가기 -->
+    </div>
+    <footer id="footer">
+      <div class="logo"></div>
+      <div class="copyright"></div>
+      <div class="sns"></div>
+    </footer> <!-- 푸터 -->
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+        var button = $(".tabbtn > li");
+        
+        $(".tab1").show();
+        $(".tab2").hide();
+
+        button.click(function(e){
+          e.preventDefault();
+          var target = $(this);
+          var index = target.index();
+          button.removeClass("active");
+          target.addClass("active");
+          if(index == 0){
+            $(".tab2").css("display","none");
+            $(".tab1").css("display","block");
+          }else{
+            $(".tab1").css("display","none");
+            $(".tab2").css("display","block");
+          }
+        });
+
+    });
+  </script>
+</body>
+</html>
