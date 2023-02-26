@@ -64,9 +64,10 @@
   padding:10px;
 }
 
-#contents .tabmenu{
-  /*background:rgba(0,0,0,0.3);*/
+/*#contents .tabmenu{
+  background:rgba(0,0,0,0.3);
 }
+*/
 
 .tabmenu .tabbtn{
   display:inline-block;
@@ -140,6 +141,30 @@
 
     #footer .copyright{width:700px; height:100px; background:red;}
     #footer .sns{width:250px; height:100px;}
+
+#layer{
+  display:none;
+  position:absolute;
+  top:50%; left:50%;
+  transform:translate(-50%, -50%);
+       width: 500px; height: 350px;
+       background: #fff;
+       border: 2px solid #000;
+       z-index: 1000;
+}
+
+#layer h2 { padding: 20px; color: #000; }
+#layer p {
+    margin: 20px 20px;
+    line-height: 1.5;
+    }
+    #layer .close {
+      position: absolute; bottom: 20px; right: 20px;
+    }
+
+    #layer .close:hover{
+      background:rgba(0,0,0,0.2);
+    }
   </style>
 </head>
 <body>
@@ -160,7 +185,7 @@
           <li><a href="#">갤러리</a></li>
         </ul>
         <ul class="tab1">
-          <li><a href="#">공지사항 첫번째</a></li><!-- 레이어 팝업 : 공지사항 첫번째 메뉴 -->
+          <li><a href="#" class="popup">공지사항 첫번째</a></li><!-- 레이어 팝업 : 공지사항 첫번째 메뉴 -->
           <li><a href="#">공지사항 두번째</a></li>
           <li><a href="#">공지사항 세번째</a></li>
         </ul>
@@ -180,9 +205,17 @@
     </footer> <!-- 푸터 -->
   </div>
 
+  <div id="layer">
+    <h2>팝업 제목</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iste nisi voluptas itaque modi consequatur vero aperiam alias inventore maxime. Expedita quibusdam repellat minus. Amet voluptas a accusamus eaque architecto!
+    </p>
+    <a href="#" class="close">닫기</a>
+</div>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script>
     $(document).ready(function(){
+      // tab menu
         var button = $(".tabbtn > li");
         
         $(".tab1").show();
@@ -201,6 +234,17 @@
             $(".tab1").css("display","none");
             $(".tab2").css("display","block");
           }
+        });
+
+      // layer
+        $(".popup").click(function(e){
+          e.preventDefault();
+          $("#layer").show();
+        });
+
+        $("#layer .close").click(function(e){
+          e.preventDefault();
+          $("#layer").hide();
         });
 
     });
