@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D3 Wireframe</title>
+
+  <style>
+    * {
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    box-sizing:border-box;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color:#333;
+}
+
+body {
+    width: 100%;
+    height: 950px;
+}
+
+
+.clearfix::before, .clearfix::after{
+  clear:both;
+  display:block;
+  content:"";
+}
+
+#header {
+    width: 200px;
+    height: 850px;
+    float: left;
+    background-color: aqua;
+}
+
+#header .logo {
+    width: 200px;
+    height: 100px;
+    background-color: aquamarine;
+}
+
+.menu {
+    width: 200px;
+    background-color: blue;
+}
+
+.mainmenu {
+  width: 100%;
+}
+
+.mainmenu li {
+  position: relative;
+  font-weight: bold;
+  text-align:center;
+}
+
+.mainmenu li a {
+  height: 75px;
+  line-height: 75px;
+  font-size: 18px;
+}
+
+.mainmenu li a:hover {
+  background-color: peachpuff;
+}
+
+.submenu {
+  /*display:none;*/
+  position: absolute;
+  top: 0;
+  left:200px;
+  width:calc(100vw - 200px);
+  background:rgba(255,255,255,0.4);
+  overflow:hidden;
+  z-index:100;
+}
+
+.submenu li {
+  float:left;
+  width:200px; height:75px; line-height:75px;
+}
+
+.submenu li a {
+  width: 100%;
+}
+
+.submenu li a:hover {
+  background: yellow;
+}
+
+.spotmenu{
+  width:100%;
+  float:left;
+  text-align: center;
+}
+
+.spotmenu li {
+display:inline-block;
+ text-align: center;
+  padding: 10px 0;
+}
+
+.spotmenu li:first-child::after {
+  content: " ";
+}
+
+.spotmenu li a {
+  text-decoration: underline;
+  color: blue;
+}
+
+#wrap {
+    float: right;
+    width: calc(100% - 200px);
+    height: 850px;
+}
+
+.imgslide { 
+  width: 100%;
+  height: 400px;
+  background-color: burlywood;
+  
+}
+
+
+
+.banner {
+    width: 100%;
+    height: 200px;
+    background-color: cadetblue;
+}
+
+.banner h3 {
+  display:inline-block;
+  text-align:center;
+  background:yellow;
+  padding:10px 30px;
+}
+
+.tabmenu {
+    width: 100%;
+    height: 250px;
+    background-color: lightskyblue;
+}
+
+.tabmenu .tabbtn {
+  display:inline-block;
+  text-align:center;
+
+ 
+}
+
+.tabmenu .tabbtn li{
+  float:left;
+  background:yellow;
+  margin-right:30px;
+  padding:10px 30px;
+}
+
+.shortcut { 
+  position:fixed;
+  top:0; right:0;
+    width: 200px;
+    height: 300px;
+    background-color: yellowgreen;
+}
+
+.shortcut li {
+  width:100%; height:90px; margin-bottom:10px;
+  background:lightcoral;
+}
+
+#footer {
+    width: 100%;
+    height: 100px;
+}
+
+#footer .logo {
+    width: 200px;
+    height: 100px;
+    float: left;
+    background-color: lightgrey;
+}
+
+.footermenu{
+  float: left;
+    width: calc(100% - 200px);
+    height: 50px;
+    line-height:50px;
+    /*background-color:aquamarine;*/
+   border-bottom:1px dotted #777; 
+}
+
+.footermenu ul {
+ width:calc(100% - 60px);
+ height:100%; 
+}
+
+.footermenu ul li {
+  float: left;
+  padding:0px 10px;
+  border-right:1px solid #AAA;
+}
+
+.footermenu ul li:last-child{
+  border:none;
+}
+
+.copyright {
+    float: left;
+    width: calc(100% - 200px);
+    height: 50px;
+    line-height:50px;
+    text-align: center;
+    /*background-color: deeppink;*/
+}
+  </style>
+</head>
+<body>
+  <header id="header">
+        <h1 class="logo">
+          <a href="./index.html"><img src="" alt="logo"></a>
+        </h1>
+        <nav>
+          <ul class="mainmenu">
+            <li><a href="#">menu1</a>
+              <ul class="submenu">
+                <li><a href="#">sub1-1</a></li>
+                <li><a href="#">sub1-2</a></li>
+              </ul>
+            </li>
+            <li><a href="#">menu2</a>
+              <ul class="submenu">
+                <li><a href="#">sub2-1</a></li>
+                <li><a href="#">sub2-2</a></li>
+                <li><a href="#">sub2-3</a></li>
+                <li><a href="#">sub2-4</a></li>
+              </ul>
+            </li>
+            <li><a href="#">menu3</a>
+              <ul class="submenu">
+                <li><a href="#">sub3-1</a></li>
+                <li><a href="#">sub3-2</a></li>
+                <li><a href="#">sub3-3</a></li>
+                <li><a href="#">sub3-4</a></li>
+              </ul>
+            </li>
+            <li><a href="#">menu4</a>
+              <ul class="submenu">
+                <li><a href="#">sub4-1</a></li>
+                <li><a href="#">sub4-2</a></li>
+                <li><a href="#">sub4-3</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="spotmenu">
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+        </nav>
+    
+</header>
+
+<div id="wrap">
+
+  <div class="imgslide" class="clearfix"><!-- fade -->
+    <ul>
+      <li><a href="#"><img src="" alt="img01"></a></li>
+      <li><a href="#"><img src="" alt="img02"></a></li>
+      <li><a href="#"><img src="" alt="img03"></a></li>
+    </ul>
+  </div>
+
+  
+    <div class="banner">
+      <h3>배너</h3>
+    </div>
+
+    <div class="tabmenu"> <!-- 탭메뉴로 공지사항, 갤러리 -->
+      <ul class="tabbtn"><!-- 레이어 팝업 : 공지사항 첫번째 메뉴 -->
+        <li><h3><a href="#">공지사항</a></h3></li>
+        <li><h3><a href="#">갤러리</a></h3></li>
+      </ul> 
+      <ul class="tab1">
+        <li><a href="#">공지사항 첫번째</a></li>
+        <li><a href="#">공지사항 두번째</a></li>
+        <li><a href="#">공지사항 세번째</a></li>
+        <li><a href="#">공지사항 네번째</a></li>
+      </ul>
+      <ul class="tab2" style="display:none;">
+        <li><a href="#"><img src="" alt="갤러리1"></a></li>
+        <li><a href="#"><img src="" alt="갤러리2"></a></li>
+        <li><a href="#"><img src="" alt="갤러리3"></a></li>
+      </ul>
+    </div>
+
+    <div class="shortcut"> <!-- fixed -->
+      <ul>
+        <li><a href="#"><img src="" alt="sc01"></a></li>
+        <li><a href="#"><img src="" alt="sc02"></a></li>
+        <li><a href="#"><img src="" alt="sc03"></a></li>
+      </ul>
+    </div>
+  
+
+</div> <!-- wrap end-->
+
+<footer id="footer" class="clearfix">
+    <h4 class="logo">
+      <a href="./index.html"><img src="" alt="logo_gray"></a>
+    </h4>
+
+    <div class="footermenu">
+      <ul>
+        <li><a href="#">FOOTERMENU1</a></li>
+        <li><a href="#">FOOTERMENU2</a></li>
+        <li><a href="#">FOOTERMENU3</a></li>
+        <li><a href="#">FOOTERMENU4</a></li>
+        <li><a href="#">FOOTERMENU5</a></li>
+        <li><a href="#">FOOTERMENU6</a></li>
+      </ul>
+    </div>
+    <div class="copyright">
+        카피라이터
+    </div>
+</footer>
+</body>
+</html>
