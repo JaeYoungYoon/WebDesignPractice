@@ -345,6 +345,8 @@ display:inline-block;
 <script>
 $(function(){
   var current = 0;
+  $(".imgslide > ul").find("li").eq(1).hide();
+  $(".imgslide > ul").find("li").eq(2).hide();
 
     setInterval(function(){
       var next = (current+1) % 3;
