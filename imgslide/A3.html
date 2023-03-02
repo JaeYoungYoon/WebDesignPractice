@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A3 Image Slide Fade</title>
+  <style>
+    *{
+      margin:0 auto;; padding:0; list-style:none;
+    }
+    a{
+      text-decoration: none;
+      color:#333;
+      display:block;
+    }
+
+    .clearfix::after, .clearfix::before{
+      clear:both;
+      display:block;
+      content:"";
+    }
+
+    .wrap{
+      width:1200px;
+      height:700px;
+      margin:0 auto;
+      /*background-color:rgba(0,0,0,0.5);*/
+    }
+
+    #header{
+      width:100%; height:100px;
+      /*background-color: orange;*/
+    }
+
+    #header h1{float:left; text-align:center; width:250px;
+    height:100px; line-height:100px; background-color: antiquewhite;}
+
+    #header .nav{
+      float:right;
+      position:relative;
+      width:950px;height:100px;
+      background:cadetblue;
+    }
+
+    #header .nav > ul {
+      text-align:center;
+      position:absolute;
+      top:20%; left:7%;
+    }
+
+    #header .nav > ul >li {
+      float:left;
+      width:200px;
+      height:40px;
+      line-height:40px;
+      
+      box-sizing: border-box;
+      font-size:18px;
+    }
+
+    #header .nav > ul >li>a:hover{
+      background:#AAA;
+      font-weight:bold;
+    }
+
+    #header .nav > ul > li > ul {
+     display:none;
+      background:#EEE;
+      width:100%;
+      z-index:10;
+    }
+
+
+    #header .nav > ul > li > ul > li >a:hover{
+      background:#aaa;
+      font-weight:bold;
+    }
+
+    #imgSlide{
+      width:100%; height:300px;
+      background:pink;
+    }
+
+    #imgSlide ul{
+      width:100%; height:100%;
+      position:relative;
+    }
+
+    #imgSlide ul li {
+      width:100%; height:100%;
+      position:absolute;
+      top:0; left:0;
+    }
+
+    #contents{
+      width:100%; 
+      height:200px;
+      /*background:yellowgreen;*/
+    }
+#contents div{
+  float:left;
+  width:33.3333%;
+  height:100%;
+}
+
+#contents .tabmenu{
+  background:yellowgreen;
+}
+
+#contents .banner{background:navy;}
+
+#contents .shortcut{background:aquamarine;}
+
+
+    #footer{
+      width:100%; height:100px;
+      
+    }
+
+    #footer .logo{
+      float:left;
+      width:250px;
+      height:100px;
+      background:gray;
+    }
+
+    .footercontents{
+      width:100%;
+    }
+
+    .footercontents li {
+      width:100%; height:50px;line-height:50px;text-align:center;
+    }
+
+    .footercontents li:nth-child(1){background:salmon;}
+    .footercontents li:nth-child(2){background:yellowgreen;}
+    
+  </style>
+</head>
+<body>
+  <div class="wrap"> <!-- 전체 상자 -->
+    <header id="header">
+      <h1><a href="./index.html"><img src="" alt="logo"></a></h1>
+      <div class="nav">
+        <ul class="mainmenu"><!-- 하위ul만 나오게 -->
+          <li><a href="#">menu1</a>
+            <ul class="submenu">
+              <li><a href="#">sub1-1</a></li>
+              <li><a href="#">sub1-2</a></li>
+              <li><a href="#">sub1-3</a></li>
+              <li><a href="#">sub1-4</a></li>
+            </ul>
+          </li>
+          <li><a href="#">menu2</a>
+            <ul class="submenu">
+              <li><a href="#">sub2-1</a></li>
+              <li><a href="#">sub2-2</a></li>
+              <li><a href="#">sub2-3</a></li>
+              <li><a href="#">sub2-4</a></li>
+            </ul>
+          </li>
+          <li><a href="#">menu3</a>
+            <ul class="submenu">
+              <li><a href="#">sub3-1</a></li>
+              <li><a href="#">sub3-2</a></li>
+              <li><a href="#">sub3-3</a></li>
+              <li><a href="#">sub3-4</a></li>
+            </ul>
+          </li>
+          <li><a href="#">menu4</a>
+            <ul class="submenu">
+              <li><a href="#">sub4-1</a></li>
+              <li><a href="#">sub4-2</a></li>
+              <li><a href="#">sub4-3</a></li>
+              <li><a href="#">sub4-4</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </header> <!-- 헤더 -->
+    <div id="imgSlide" class="clearfix">
+      <ul>
+        <li><img src="" alt="이미지01"></li>
+        <li><img src="" alt="이미지02"></li>
+        <li><img src="" alt="이미지03"></li>
+      </ul>
+    </div> <!-- 페이드 이미지 슬라이드 -->
+    <div id="contents" class="clearfix">
+      <div class="tabmenu"> <!-- 탭메뉴로 공지사항, 갤러리 -->
+        <ul><!-- 레이어 팝업 : 공지사항 첫번째 메뉴 -->
+          <li><a href="#">공지사항</a></li>
+          <li><a href="#">갤러리</a></li>
+        </ul> 
+        <ul class="tab1">
+          <li><a href="#">공지사항 첫번째</a></li>
+          <li><a href="#">공지사항 두번째</a></li>
+          <li><a href="#">공지사항 세번째</a></li>
+        </ul>
+        <ul class="tab2" style="display:none;">
+          <li><a href="#"><img src="" alt="갤러리1"></a></li>
+          <li><a href="#"><img src="" alt="갤러리2"></a></li>
+          <li><a href="#"><img src="" alt="갤러리3"></a></li>
+        </ul>
+      </div>
+      <div class="banner"></div> <!-- 배너 -->
+      <div class="shortcut"></div> <!-- 바로가기 -->
+    </div>
+    <footer id="footer">
+      <div class="logo"><a href="./index.html"><img src="" alt="logo_gray"></a></div>
+      <ul class="footercontents">
+        <li>하단메뉴</li>
+        <li>copyright</li>
+      </ul>
+    </footer> <!-- 푸터 -->
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      
+      // menu nav
+
+      $(".mainmenu > li").hover(function(){
+        $(this).find(".submenu").stop().slideDown();
+      }, function(){
+        $(this).find(".submenu").stop().slideUp();
+      });
+
+      // image slide
+      var container = $("#imgSlide"),
+          slideGroup = container.find("ul"),
+          slides = slideGroup.find("li"),
+          current = 0;
+      slides.eq(1).hide();
+      slides.eq(2).hide();
+      
+      setInterval(function(){
+        var next = (current + 1) % 3;
+        slides.eq(current).fadeOut();
+        slides.eq(next).fadeIn();
+        current = next;
+      },3000);
+
+
+      // tabmenu
+
+    });
+  </script>
+</body>
+</html>
