@@ -17,7 +17,7 @@
       font-size:18px;
     }
 
-    .clearfix::after, .clearfix::before{
+    .clearfix{
       clear:both;
       display:block;
       content:"";
@@ -42,7 +42,7 @@
       float:right;
       position:relative;
       width:950px;height:100px;
-      background:cadetblue;
+      background:lightgoldenrodyellow;
     }
 
     #header .nav > ul {
@@ -61,22 +61,25 @@
       font-size:18px;
     }
 
-    #header .nav > ul >li>a:hover{
-      background:#AAA;
+    #header .nav > ul >li >a {
+      background:navy;
+      color:gold;
       font-weight:bold;
     }
 
     #header .nav > ul > li > ul {
-     display:none;
-      background:#EEE;
+      display:none;
+      background:gold;
       width:100%;
-      z-index:10;
     }
 
+    #header .nav > ul > li > ul > li{
+      z-index:9999!important;
+    }
 
     #header .nav > ul > li > ul > li >a:hover{
-      background:#aaa;
-      font-weight:bold;
+      background:darkkhaki;
+      color:gold;
     }
 
     #imgSlide{
@@ -234,36 +237,32 @@
       <h1><a href="./index.html"><img src="" alt="logo"></a></h1>
       <div class="nav">
         <ul class="mainmenu"><!-- 하위ul만 나오게 -->
-          <li><a href="#">menu1</a>
+          <li><a href="#">강원천문대</a>
             <ul class="submenu">
-              <li><a href="#">sub1-1</a></li>
-              <li><a href="#">sub1-2</a></li>
-              <li><a href="#">sub1-3</a></li>
-              <li><a href="#">sub1-4</a></li>
+              <li><a href="#">천문대소개</a></li>
+              <li><a href="#">인사말</a></li>
+              <li><a href="#">오시는길</a></li>
             </ul>
           </li>
-          <li><a href="#">menu2</a>
+          <li><a href="#">이용안내</a>
             <ul class="submenu">
-              <li><a href="#">sub2-1</a></li>
-              <li><a href="#">sub2-2</a></li>
-              <li><a href="#">sub2-3</a></li>
-              <li><a href="#">sub2-4</a></li>
+              <li><a href="#">프로그램</a></li>
+              <li><a href="#">관람시간표</a></li>
+              <li><a href="#">이달의 별자리</a></li>
             </ul>
           </li>
-          <li><a href="#">menu3</a>
+          <li><a href="#">천문대예약</a>
             <ul class="submenu">
-              <li><a href="#">sub3-1</a></li>
-              <li><a href="#">sub3-2</a></li>
-              <li><a href="#">sub3-3</a></li>
-              <li><a href="#">sub3-4</a></li>
+              <li><a href="#">예약하기</a></li>
+              <li><a href="#">예약확인</a></li>
+              <li><a href="#">예약취소</a></li>
             </ul>
           </li>
-          <li><a href="#">menu4</a>
+          <li><a href="#">커뮤니티</a>
             <ul class="submenu">
-              <li><a href="#">sub4-1</a></li>
-              <li><a href="#">sub4-2</a></li>
-              <li><a href="#">sub4-3</a></li>
-              <li><a href="#">sub4-4</a></li>
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">방문후기</a></li>
+              <li><a href="#">자유게시판</a></li>
             </ul>
           </li>
         </ul>
@@ -311,15 +310,15 @@
     <div class="close">닫기</div>
   </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
   <script>
     $(document).ready(function(){
       
       // menu nav
 
-      $(".mainmenu > li").hover(function(){
+      $(".mainmenu > li").mouseover(function(){
         $(this).find(".submenu").stop().slideDown();
-      }, function(){
+      }).mouseout(function(){
         $(this).find(".submenu").stop().slideUp();
       });
 

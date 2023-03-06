@@ -211,8 +211,37 @@ body {
     <h1 class="logo">
       
     </h1>
-    <nav>
-      
+    <nav class="nav">
+      <ul class="mainmenu">
+        <li><a href="#">이용안내</a>
+          <ul class="submenu">
+            <li><a href="#">이용방법</a></li>
+            <li><a href="#">이용시간</a></li>
+            <li><a href="#">이용요금</a></li>
+          </ul>
+        </li>
+        <li><a href="#">이벤트정보</a>
+          <ul class="submenu">
+            <li><a href="#">현장이벤트</a></li>
+            <li><a href="#">온라인이벤트</a></li>
+            <li><a href="#">이벤트예약</a></li>
+          </ul>
+        </li>
+        <li><a href="#">프로그램</a>
+          <ul class="submenu">
+            <li><a href="#">프로그램안내</a></li>
+            <li><a href="#">온라인예약</a></li>
+            <li><a href="#">단체예약싱담</a></li>
+          </ul>
+        </li>
+        <li><a href="#">고객센터</a>
+          <ul class="submenu">
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">자주묻는질문</a></li>
+            <li><a href="#">자료실</a></li>
+          </ul>
+        </li>
+      </ul>
     </nav>
   </header>
 
@@ -271,6 +300,12 @@ body {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>
 $(function(){
+  $(".mainmenu > li").mouseover(function(){
+    $(this).find(".submenu").stop().slideDown();
+  }).mouseout(function(){
+    $(this).find(".submenu").stop().slideUp();
+  });
+
   $(".popup").click(function(e){
     e.preventDefault();
     $("#layer").show();
