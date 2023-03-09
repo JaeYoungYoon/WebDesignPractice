@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A3 Contents</title>
+  <link rel="stylesheet" href="./css/style.css">
+
+  <script src="./script/jquery-1.12.3.js"></script>
+  <script src="./script/script.js"></script>
+</head>
+<body>
+  <div class="wrap"> <!-- 전체 상자 -->
+    <header id="header">
+      <h1><a href="./index.html"><img src="./images/A3_logo.png" alt="강원천문대 로고"></a></h1>
+      <div class="nav">
+        <ul class="mainmenu"><!-- 하위ul만 나오게 -->
+          <li><a href="#">강원천문대</a>
+            <ul class="submenu">
+              <li><a href="#">천문대소개</a></li>
+              <li><a href="#">인사말</a></li>
+              <li><a href="#">오시는길</a></li>
+            </ul>
+          </li>
+          <li><a href="#">이용안내</a>
+            <ul class="submenu">
+              <li><a href="#">프로그램</a></li>
+              <li><a href="#">관람시간표</a></li>
+              <li><a href="#">이달의 별자리</a></li>
+            </ul>
+          </li>
+          <li><a href="#">천문대예약</a>
+            <ul class="submenu">
+              <li><a href="#">예약하기</a></li>
+              <li><a href="#">예약확인</a></li>
+              <li><a href="#">예약취소</a></li>
+            </ul>
+          </li>
+          <li><a href="#">커뮤니티</a>
+            <ul class="submenu">
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">방문후기</a></li>
+              <li><a href="#">자유게시판</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </header> <!-- 헤더 -->
+    <div id="imgSlide" class="clearfix">
+      <ul>
+        <li><img src="./images/A3_slide1.jpg" alt="이미지01"></li>
+        <li><img src="./images/A3_slide2.jpg" alt="이미지02"></li>
+        <li><img src="./images/A3_slide3.jpg" alt="이미지03"></li>
+      </ul>
+    </div> <!-- 페이드 이미지 슬라이드 -->
+    <div id="contents" class="clearfix">
+      <div class="tabmenu"> <!-- 탭메뉴로 공지사항, 갤러리 -->
+        <ul class="tabbtn"><!-- 레이어 팝업 : 공지사항 첫번째 메뉴 -->
+          <li class="active"><a href="#">공지사항</a></li>
+          <li><a href="#">갤러리</a></li>
+        </ul> 
+        <ul class="tab1">
+          <li><a href="#" class="popup">공지사항 첫번째</a></li>
+          <li><a href="#">공지사항 두번째</a></li>
+          <li><a href="#">공지사항 세번째</a></li>
+        </ul>
+        <ul class="tab2">
+          <li><a href="#"><img src="./images/A3_gallery1.jpg" alt="갤러리1"></a></li>
+          <li><a href="#"><img src="./images/A3_gallery2.jpg" alt="갤러리2"></a></li>
+          <li><a href="#"><img src="./images/A3_gallery3.jpg" alt="갤러리3"></a></li>
+        </ul>
+      </div>
+      <div class="banner"><img src="./images/A3_banner.jpg" alt="배너"></div> <!-- 배너 -->
+      <div class="shortcut"><img src="./images/A3_shortcut.jpg" alt="바로가기"></div> <!-- 바로가기 -->
+    </div>
+    <footer id="footer">
+      <div class="logo"><a href="./index.html"><img src="./images/A3_logoGray.png" alt="logo_grayscale"></a></div>
+      <ul class="footercontents">
+        <li><span>footermenu1</span><span>footermenu2</span><span>footermenu3</span><span>footermenu4</span><span>footermenu5</span></li>
+        <li><span>이 페이지는 A3 강원천문대 임시 페이지입니다.</span></li>
+      </ul>
+    </footer> <!-- 푸터 -->
+  </div>
+
+  <div id="layer">
+    <h2>title</h2>
+    <p>메뉴 내비게이션, 이미지 페이드, 탭메뉴, 레이어</p>
+    <p>사진 : https://koseongmin1.github.io/GangwonObservatory/</p>
+    <div class="close">닫기</div>
+  </div>
+
+</body>
+</html>
