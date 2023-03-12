@@ -2,11 +2,11 @@
 $(document).ready(function() {
 
   /* menu navigation */
-  $(".mainmenu li a").mouseenter(function(){
-    $(".submenu, #subbg").stop().slideDown();
-  }).mouseout(function(){
-    $(".submenu, #subbg").stop().slideUp();
-  });
+  $(".mainmenu").hover(function(){
+    $(".submenu, #subbg").slideDown(1000);
+  }, function(){
+    $(".submenu, #subbg").slideUp(1000);
+});
 
 
   /*image slide*/
