@@ -118,11 +118,13 @@ header nav {
 }
 
 
+
+
 #contents h3{
     width:100px;
     height:30px;
     text-align:center;
-    line-height:30px;
+    line-height:1.5;
     background:#EEEEEE;
     margin-bottom:10px;
 }
@@ -151,8 +153,8 @@ header nav {
 }
 
 #contents .gallery ul li{
-    width:170px;
-    height:200px;
+    width:45%;
+    height:75%;
     margin-right:20px;
 
     float:left;
@@ -160,8 +162,8 @@ header nav {
 }
 
 #contents .gallery ul li .img{
-    width:170px;
-    height:140px;
+    width:100%;
+    height:70%;
     margin-bottom:5px;
     background:yellow;
 }
@@ -169,6 +171,7 @@ header nav {
 #contents .gallery ul li span{
     display:block;
     width:100%;
+    height:25%;
     text-align:center;
 }
 
@@ -198,6 +201,10 @@ header nav {
 
 #contents .shortcut ul li:nth-child(2n-1){
     background: lightblue;
+}
+
+#contents .shortcut ul li:nth-child(2n){
+    background: darkorchid;
 }
 
 
